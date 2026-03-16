@@ -1,0 +1,62 @@
+.shell powershell
+
+# Reload whkd configuration
+# alt + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
+alt + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
+alt + shift + o         : komorebic reload-configuration
+
+alt + i                 : komorebic toggle-shortcuts
+
+# App shortcuts - these require shell to be pwsh / powershell
+# The apps will be focused if open, or launched if not open
+# alt + f                 : if ($wshell.AppActivate('Zen Browser') -eq $False) { start Zen Browser }
+# alt + b                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
+
+# Focus windows
+alt + h                 : komorebic focus left
+alt + k                 : komorebic focus down
+alt + j                 : komorebic focus up
+alt + l                 : komorebic focus right
+alt + oem_4             : komorebic cycle-focus previous # oem_4 is [
+alt + oem_6             : komorebic cycle-focus next # oem_6 is ]
+
+# Move windows
+alt + shift + h         : komorebic move left
+alt + shift + k         : komorebic move down
+alt + shift + j         : komorebic move up
+alt + shift + l         : komorebic move right
+alt + shift + return    : komorebic promote
+
+# Resize
+alt + oem_plus          : komorebic resize-axis horizontal increase
+alt + oem_minus         : komorebic resize-axis horizontal decrease
+alt + shift + oem_plus  : komorebic resize-axis vertical increase
+alt + shift + oem_minus : komorebic resize-axis vertical decrease
+
+# Manipulate windows
+alt + t                 : komorebic toggle-float
+alt + shift + f         : komorebic toggle-monocle
+
+# Window manager options
+alt + shift + r         : komorebic retile
+alt + p                 : komorebic toggle-pause
+
+# Layouts
+alt + x                 : komorebic flip-layout horizontal
+alt + y                 : komorebic flip-layout vertical
+
+# Workspaces
+alt + left              : komorebic cycle-workspace previous
+alt + right             : komorebic cycle-workspace next
+
+# Move windows across workspaces
+alt + shift + 1         : komorebic send-to-workspace 0
+alt + shift + 2         : komorebic send-to-workspace 1
+alt + shift + 3         : komorebic send-to-workspace 2
+alt + shift + 4         : komorebic send-to-workspace 3
+alt + shift + 5         : komorebic send-to-workspace 4
+alt + shift + 6         : komorebic send-to-workspace 5
+alt + shift + 7         : komorebic send-to-workspace 6
+alt + shift + 8         : komorebic send-to-workspace 7
+alt + shift + left      : komorebic cycle-move-to-workspace previous
+alt + shift + right     : komorebic cycle-move-to-workspace next

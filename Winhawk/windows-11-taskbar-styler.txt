@@ -1,0 +1,16 @@
+theme: DockLike
+controlStyles:
+  - target: Taskbar.TaskbarFrame > Grid#RootGrid
+    styles:
+      - Margin=0,2,0,4
+      - CornerRadius=20
+  - target: Grid#SystemTrayFrameGrid
+    styles:
+      - Margin=8,6,8,8
+      - CornerRadius=14,3,3,14
+      - BorderThickness=0
+styleConstants:
+  - ''
+resourceVariables:
+  - variableKey: ''
+    value: ''

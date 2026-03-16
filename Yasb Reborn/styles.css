@@ -1,0 +1,956 @@
+:root {
+    --rosewater: #f5e0dc;
+    --flamingo: #f2cdcd;
+    --pink: #f5c2e7;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+    --maroon: #eba0ac;
+    --peach: #fab387;
+    --peachedit: #ecd093;
+    --peachedit2: #e9bb77;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --teal: #94e2d5;
+    --sky: #89dceb;
+    --sapphire: #74c7ec;
+    --blue: #89b4fa;
+    --lavender: #b4befe;
+    --text: #cdd6f4;
+    --subtext1: #bac2de;
+    --subtext0: #a6adc8;
+    --overlay2: #9399b2;
+    --overlay1: #7f849c;
+    --overlay0: #6c7086;
+    --surface2: #585b70;
+    --surface1: #45475a;
+    --surface1: #282936;
+    --base: #1e1e2e;
+    --mantle: rgba(24, 24, 37, 0.5);
+    --crust: rgba(17, 17, 27, 0.5);
+}
+* {
+    font-size: 12px;
+    color: #bec8e7;
+    font-weight: 500;
+    font-family: "JetBrainsMono NFP";
+    margin: 0;
+    padding: 0;
+}
+.yasb-bar {
+    padding: 0;
+    margin: 0;
+}
+.widget {
+    padding: 0 8px;
+    margin: 0 4px;
+    border-radius: 6px;
+}
+.widget .icon {
+    font-size: 18px;
+}
+/*HOME WIDGET*/
+.home-widget {
+    background-color: powderblue;
+}
+.home-widget .icon {
+    color: #142123;
+}
+/*HOME WIDGET DROPDOWN*/
+.home-menu {
+    background-color: #282936;
+    padding: 0;
+    margin-left: 0px;
+}
+.home-menu .menu-item {
+    padding: 6px 48px 7px 16px;
+    font-size: 12px;
+    font-family: "JetBrainsMono NFP";
+    font-weight: 600;
+}
+.home-menu .menu-item:hover {
+    background-color: rgba(128, 130, 158, 0.15);
+    color: #fff;
+}
+.home-menu .separator {
+    max-height: 1px;
+    background-color: rgba(128, 130, 158, 0.3);
+}
+/*WIN BUTTON WIDGET*/
+.win-btn {
+    background-color: #f3bf7d;
+}
+.win-btn .icon {
+    color: #142123;
+}
+/*WINDOWS WIDGET*/
+.windows-desktops {
+    background-color: #221f2e;
+}
+.windows-desktops .ws-btn {
+    border: none;
+    background-color: #9cd1dd;
+    margin: 0px 4px;
+    padding: 0;
+    color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    height: 10px;
+    width: 10px;
+}
+.windows-desktops .ws-btn:hover {
+    background-color: mintcream;
+}
+
+.windows-desktops .ws-btn.active {
+    color: rgba(149, 177, 255, 0);
+    background-color: lightsalmon;
+    width: 36px;
+    height: 10px;
+    border-radius: 5px;
+}
+/*TRAFFIC WIDGET*/
+.traffic-widget {
+    background-color: #9ecfd7;
+    padding: 0;
+}
+.traffic-widget .icon {
+    color: #142123;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+.traffic-widget .label {
+    background-color: #221f2e;
+    margin: 1px;
+    border-radius: 6px;
+    padding: 0 6px;
+    color: #9ecfd7;
+}
+/*CLOCK WIDGET*/
+.clock-widget {
+    background-color: lemonchiffon;
+    padding: 0;
+}
+.clock-widget .icon {
+    color: #142123;
+    padding: 0 6px;
+}
+.clock-widget .label {
+    background-color: #221f2e;
+    color: lemonchiffon;
+    padding: 0 6px;
+    margin: 1px;
+    border-radius: 6px;
+}
+
+/* CLOCK POPUP — unified system style */
+.clock-popup.calendar,
+.clock-popup.alarm,
+.clock-popup.timer {
+    min-width: 420px;
+    background-color: rgba(8, 8, 8, 0.65);
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    outline: none;
+    color: #d4dcdf;
+}
+
+/* Calendar grid */
+.clock-popup.calendar .calendar-table,
+.clock-popup.calendar .calendar-table::item {
+    background-color: transparent;
+    color: #d4dcdf;
+    font-family: "JetBrains Mono";
+    font-size: 13px;
+    margin: 0;
+    padding: 2px;
+    border: none;
+    outline: none;
+}
+
+.clock-popup.calendar .calendar-table::item:selected {
+    background-color: rgba(235, 160, 172, 0.35);
+    color: #d4dcdf;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Day / Month / Date labels */
+.clock-popup.calendar .day-label,
+.clock-popup.calendar .month-label,
+.clock-popup.calendar .date-label {
+    font-family: "JetBrains Mono";
+    color: #d4dcdf;
+}
+.clock-popup.calendar .day-label {
+    margin-top: 16px;
+    font-size: 13px;
+}
+.clock-popup.calendar .month-label {
+    font-size: 14px;
+}
+.clock-popup.calendar .date-label {
+    font-size: 72px;
+    font-weight: 900;
+    margin-top: -12px;
+}
+
+/* Extended container */
+.clock-popup.calendar .extended-container {
+    border-left: 1px solid #45475a;
+    background-color: transparent;
+    padding-left: 14px;
+}
+
+.clock-popup.calendar .extended-container .upcoming-events-header {
+    font-size: 12px;
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    color: #d4dcdf;
+    margin: 6px 0;
+}
+
+.clock-popup.calendar .extended-container .upcoming-events-item {
+    font-size: 12px;
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    color: #d4dcdf;
+    padding: 3px 0;
+}
+
+/* Alarm / Timer container */
+.clock-popup .clock-popup-container {
+    padding: 14px;
+}
+.clock-popup .clock-popup-footer {
+    padding: 14px;
+    border-top: 1px solid #45475a;
+    background-color: rgba(8, 8, 8, 0.65);
+}
+
+/* Inputs */
+.clock-popup .clock-label-timer {
+    font-family: "JetBrains Mono";
+    font-size: 12px;
+    font-weight: bold;
+    color: #d4dcdf;
+}
+.clock-popup .clock-input-time {
+    font-size: 44px;
+    background-color: transparent;
+    border: none;
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    color: #d4dcdf;
+}
+.clock-popup .alarm-input-title {
+    font-family: "JetBrains Mono";
+    font-size: 13px;
+    font-weight: bold;
+    color: #d4dcdf;
+    background-color: rgba(8, 8, 8, 0.65);
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    padding: 4px 8px;
+    margin-top: 8px;
+}
+
+/* Buttons */
+.clock-popup .button {
+    border-radius: 4px;
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 26px;
+    min-width: 64px;
+    margin: 4px 0;
+    background-color: rgba(8, 8, 8, 0.65);
+    color: #d4dcdf;
+}
+.clock-popup .button:hover {
+    background-color: rgba(8, 8, 8, 0.75);
+}
+.clock-popup .button.is-alarm-enabled {
+    background-color: rgba(8, 8, 8, 0.75);
+}
+.clock-popup .button.is-alarm-disabled {
+    background-color: rgba(8, 8, 8, 0.55);
+}
+
+/* Active alarm window */
+.active-alarm-window {
+    background-color: rgba(8, 8, 8, 0.65);
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    padding: 28px;
+    color: #d4dcdf;
+}
+.active-alarm-window .alarm-title-icon {
+    font-size: 60px;
+    color: #d4dcdf;
+    margin-bottom: 14px;
+}
+.active-alarm-window .alarm-title {
+    font-family: "JetBrains Mono";
+    font-size: 22px;
+    font-weight: bold;
+    color: #d4dcdf;
+}
+.active-alarm-window .alarm-info {
+    font-family: "JetBrains Mono";
+    font-size: 14px;
+    font-weight: bold;
+    color: #d4dcdf;
+    margin-bottom: 28px;
+}
+.active-alarm-window .button {
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    font-size: 13px;
+    min-height: 34px;
+    min-width: 96px;
+    background-color: rgba(8, 8, 8, 0.65);
+    color: #d4dcdf;
+}
+.clock-popup.calendar .extended-container .upcoming-events-item:hover {
+    color: #d4dcdf;
+}
+
+/* CALENDAR */
+.calendar {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #45475a;
+    border-radius: 6px;
+}
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #cdd6f4;
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+.calendar .calendar-table::item:selected {
+    border: 2px solid #eba0ac;
+    border-radius: 6px;
+}
+.calendar .day-label,
+.calendar .month-label,
+.calendar .date-label {
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    color: #cdd6f4;
+    min-width: 140px;
+    max-width: 140px;
+}
+.calendar .day-label {
+    font-size: 14px;
+    margin-top: 20px;
+}
+.calendar .month-label {
+    font-size: 14px;
+}
+.calendar .date-label {
+    font-size: 88px;
+    margin-top: -10px;
+}
+
+/*VOLIME WIDGET*/
+.volume-widget {
+    background-color: #f38ba8;
+    padding: 0;
+}
+.volume-widget .icon {
+    color: #142123;
+    padding: 0 6px;
+}
+.volume-widget .label {
+    background-color: #221f2e;
+    color: #f38ba8;
+    padding: 0 8px;
+    margin: 1px;
+    border-radius: 6px;
+}
+
+/* VOLUME POPUP */
+.audio-menu {
+    background-color: rgba(8, 8, 8, 0.65);
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    outline: none;
+}
+.audio-container .device {
+    font-family: "JetBrains Mono";
+    color: #cdd6f4;
+    font-weight: bold;
+    border: none;
+    padding: 6px 8px 6px 4px;
+    font-size: 13px;
+    border-radius: 6px;
+    outline: none;
+}
+.audio-container .device.selected {
+    border: 2px solid #eba0ac;
+}
+
+/*MICROPHONE WIDGET*/
+.microphone-widget {
+    background-color: peachpuff;
+    padding: 0px;
+}
+.microphone-widget .icon {
+    color: #142123;
+    padding: 0 8px;
+}
+.microphone-widget .label {
+    background-color: #221f2e;
+    color: peachpuff;
+    padding: 0 8px;
+    margin: 1px;
+    border-radius: 6px;
+}
+/*WEATHER WIDGET*/
+.weather-widget {
+    background-color: skyblue;
+    padding: 0;
+}
+.weather-widget .icon {
+    color: #142123;
+    padding: 0 6px;
+}
+.weather-widget .label {
+    background-color: #221f2e;
+    color: skyblue;
+    padding: 0 6px;
+    margin: 1px;
+    border-radius: 6px;
+}
+/*WEATHER CARD STYLE*/
+.weather-card {
+    blur: true;
+    acrylic: true;
+    border: 4px solid skyblue;
+    border-radius: 6px;
+    background-color: transparent;
+}
+.weather-card-today {
+    color: skyblue;
+    border-radius: 8px;
+    background-color: rgba(17, 17, 27, 1);
+}
+.weather-card-today .label {
+    font-size: 12px;
+}
+.weather-card-today .label.location {
+    font-size: 20px;
+    font-weight: 600;
+}
+.weather-card-today .label.alert {
+    font-size: 12px;
+    font-weight: 700;
+    background-color: rgba(247, 199, 42, 0.05);
+    border: 1px solid rgba(247, 209, 42, 0.1);
+    color: rgba(196, 181, 162, 0.85);
+    border-radius: 6px;
+    padding: 5px 0;
+}
+.weather-card-day {
+    color: skyblue;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(17, 17, 27, 0.7);
+}
+.weather-card-day.active {
+    background-color: rgba(17, 17, 27, 1);
+    border: 3px solid skyblue;
+}
+.weather-card-day:hover {
+    background-color: rgba(17, 17, 27, 1);
+}
+.weather-card-day .label {
+    font-size: 12px;
+}
+.weather-card .hourly-container {
+    border: 1px solid #282936;
+    background-color: rgba(17, 17, 27, 1);
+    border-radius: 8px;
+    min-height: 150px;
+}
+.weather-card .hourly-data {
+    /* font-family: 'Segoe UI';*/
+    /* color: cyan;*/ /* <- Font color */
+    background-color: skyblue; /* <- Curve color */
+    font-size: 12px;
+    font-weight: bold;
+}
+/*LANGUAGE WIDGET*/
+.language-widget {
+    background-color: #f5c276;
+    padding: 0;
+}
+.language-widget .icon {
+    color: #142123;
+    padding: 0 6px;
+}
+.language-widget .label {
+    background-color: #221f2e;
+    color: #f5c276;
+    padding: 0 8px;
+    margin: 1px;
+    border-radius: 6px;
+}
+/*TASKBAR WIDGET*/
+.taskbar-widget {
+    background-color: #221f2e;
+    padding: 0;
+}
+.taskbar-widget .app-container {
+    padding: 0 4px;
+    border-radius: 4px;
+    margin: 0;
+}
+.taskbar-widget .app-container:hover {
+    background: #373a3f;
+}
+.taskbar-widget .app-container.foreground {
+    background: #324043;
+}
+.taskbar-widget .app-container .app-title {
+    padding-left: 4px;
+}
+/* Taskbar preview popup is very limited in styling options, do not use margins/paddings here */
+.taskbar-preview {
+    border-radius: 8px;
+    background-color: #2b2c2d;
+}
+.taskbar-preview.flashing {
+    background-color: #7f434a;
+}
+.taskbar-preview .header {
+    padding-bottom: 12px;
+    padding-top: 4px;
+}
+.taskbar-preview .header .title {
+    color: #d6d6d6;
+    font-family: "JetBrainsMono NFP";
+    font-weight: 600;
+    font-size: 13px;
+}
+/*ACTIVE WINDOW WIDGET*/
+.active-window-widget {
+    background-color: #c6a7e8;
+    padding: 0;
+}
+.active-window-widget .label {
+    color: #c6a7e8;
+    background-color: #221f2e;
+    padding: 0 8px;
+    margin: 1px;
+    border-radius: 6px;
+}
+.active-window-widget .icon {
+    padding: 0 8px;
+    border: none;
+    margin: 0;
+    background-color: #c6a7e8;
+}
+/*POWER MENU WIDGET*/
+.power-menu-widget {
+    background-color: var(--red);
+    padding: 0;
+}
+.power-menu-widget .label {
+    color: #142123;
+    padding: 0 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+/*POWER MENU POPUP*/
+.uptime {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: rgba(191, 202, 219, 0.726);
+    font-weight: 600;
+}
+.power-menu-popup {
+    background-color: rgba(24, 24, 37, 0);
+    border-radius: 12px;
+}
+.power-menu-popup .button {
+    padding: 0;
+    width: 180px;
+    height: 230px;
+    border-radius: 8px;
+    background-color: #221f2e;
+    color: sandybrown;
+    border: 8px solid #1b1925;
+    margin: 0px;
+}
+.power-menu-popup .button.hover {
+    background-color: #1b1925;
+}
+.power-menu-popup .button .label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: sandybrown;
+}
+.power-menu-popup .button .icon {
+    font-size: 64px;
+    padding-top: 32px;
+    color: sandybrown;
+}
+.power-menu-popup .button.cancel .icon {
+    font-size: 64px;
+    padding-top: 32px;
+    color: sandybrown;
+}
+.power-menu-popup .button.cancel .label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: sandybrown;
+}
+.power-menu-popup .button.cancel {
+    padding: 0;
+    width: 180px;
+    height: 230px;
+    border-radius: 8px;
+    background-color: #221f2e;
+    color: sandybrown;
+    border: 8px solid #1b1925;
+    margin: 0px;
+}
+.power-menu-popup .button.cancel:hover {
+    background-color: #1b1925;
+}
+/*WALLPAPERS WIDGET*/
+.wallpapers-widget {
+    padding: 0 6px 0 6px;
+    background-color: #f3bf7d;
+}
+.wallpapers-widget .icon {
+    color: #221f2e;
+}
+/*WALLPAPERS PICKER GALLERY GUI*/
+.wallpapers-gallery-window {
+    background-color: rgba(85, 42, 240, 0.01);
+    border: 0;
+    margin: 0;
+}
+.wallpapers-gallery-buttons {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin: 0 8px 8px 8px;
+    width: 600px;
+}
+.wallpapers-gallery-buttons:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.wallpapers-gallery-image {
+    border: 4px solid transparent;
+    border-radius: 10px;
+}
+.wallpapers-gallery-image:hover {
+    border: 4px solid rgb(66, 68, 83);
+}
+.wallpapers-gallery-image.focused {
+    border: 4px solid #89b4fa;
+}
+/*MEDIA WIDGET*/
+.media-widget {
+    padding: 0;
+    margin: 0 4px;
+    border-radius: 8px;
+    background-color: #94e2d5;
+}
+.media-widget .label {
+    color: #94e2d5;
+    background-color: rgba(0, 0, 0, 0.65);
+    margin: 1px;
+    padding: 0 4px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+.media-widget .label.maintext {
+    padding-top: 3px;
+}
+.media-widget .btn {
+    color: #142123;
+    padding: 0 5px;
+    margin: 0;
+    font-family: Segoe Fluent Icons;
+    font-weight: 400;
+}
+.media-widget .btn.play {
+    font-size: 16px;
+}
+.media-widget .btn.prev {
+    padding-left: 10px;
+    color: #142123;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.media-widget .btn.next {
+    padding-right: 10px;
+    color: #142123;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.media-widget .btn:hover {
+    color: snow;
+}
+.media-widget .btn.disabled:hover {
+    color: snow;
+}
+/* MEDIA POPUP */
+.media-menu {
+    min-width: 400px;
+    max-width: 400px;
+    background-color: rgba(8, 8, 8, 0.65);
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    outline: none;
+}
+.media-menu .thumbnail {
+    margin-left: 4px;
+    margin-right: 4px;
+    border: 1px solid #45475a;
+    border-radius: 6px;
+}
+.media-menu .title,
+.media-menu .artist,
+.media-menu .source {
+    font-weight: bold;
+    font-family: "JetBrains Mono";
+    color: #d4dcdf;
+    margin-left: 10px;
+}
+.media-menu .title {
+    padding-left: 4px;
+    font-size: 16px;
+}
+.media-menu .artist {
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    padding-left: 4px;
+}
+.media-menu .source {
+    font-size: 12px;
+    font-weight: bold;
+    color: #18181b;
+    background-color: #cdd6f4;
+    border-radius: 6px;
+    padding: 2px 4px;
+}
+.media-menu .source.brave {
+    background: transparent;
+    border: 1px solid #fe640b;
+    color: #cdd6f4;
+}
+.media-menu .source.firefox {
+    background-color: #fe640b;
+    color: #cdd6f4;
+}
+.media-menu .source.opera,
+.media-menu .source.vivaldi {
+    background-color: #f38ba8;
+    color: #18181b;
+}
+.media-menu .source.spotify {
+    background-color: #a6e3a1;
+    color: #18181b;
+}
+.media-menu .source.edge,
+.media-menu .source.windows-media {
+    background-color: #89b4fa;
+    color: #18181b;
+}
+.media-menu .btn {
+    font-family: "Segoe Fluent Icons";
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    color: #d4dcdf;
+}
+.media-menu .btn.prev {
+    margin-left: 10px;
+}
+.media-menu .btn.play {
+    background-color: transparent;
+    font-size: 20px;
+}
+.media-menu .btn.disabled {
+    color: #45475a;
+}
+.media-menu .playback-time {
+    font-size: 14px;
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    color: #d4dcdf;
+    margin-top: 12px;
+    min-width: 100px;
+}
+.media-menu .progress-slider {
+    height: 10px;
+    border-radius: 6px;
+}
+.media-menu .progress-slider::groove {
+    background: transparent;
+    height: 4px;
+    border-radius: 6px;
+}
+.media-menu .progress-slider::groove:hover {
+    background: #585b70;
+    height: 6px;
+    border-radius: 6px;
+}
+.media-menu .progress-slider::sub-page {
+    background: #d4dcdf;
+    border-radius: 6px;
+    height: 4px;
+}
+
+/* Systray */
+.systray {
+    border: none;
+    margin: 0 4px;
+    padding: 0px;
+    background: cornflowerblue;
+}
+.systray .unpinned-container {
+    border-radius: 0;
+    background-color: rgba(17, 17, 27, 0.9);
+    margin: 1px;
+    padding: 0 0px;
+    border-radius: 6;
+}
+.systray .unpinned-visibility-btn {
+    border-radius: 0px;
+    height: 20px;
+    width: 16px;
+    outline: none;
+}
+.systray .unpinned-visibility-btn {
+    color: black;
+    padding: 0 4px;
+}
+.systray .unpinned-visibility-btn:hover {
+    color: snow;
+}
+.systray .button {
+    padding: 0px 4px;
+    border-radius: var(--radius-normal);
+    padding: 6px 6px;
+    outline: none;
+}
+.systray .button .icon {
+}
+.systray .button .icon:hover {
+    background-color: var(--bg-hover-primary);
+}
+.systray .button[dragging="true"] {
+    background-color: var(--bg-hover-primary);
+    border-color: var(--color-green);
+}
+.systray .pinned-container {
+    border-radius: 0;
+    background-color: rgba(17, 17, 27, 0.9);
+    margin: 1px;
+    padding: 0 0px;
+    border-radius: 6;
+}
+.systray .pinned-container:hover {
+    background: rgba(50, 50, 50, 0.9);
+}
+.systray .pinned-container[forceshow="true"] {
+}
+
+/* Komorebi Workspace */
+.komorebi-workspaces {
+    background-color: #221f2e;
+}
+.komorebi-workspaces .offline-status {
+    color: #627199;
+    font-size: 12px;
+    padding: 0 4px;
+    font-weight: 600;
+}
+.komorebi-workspaces .ws-btn {
+    border: none;
+    background-color: #9cd1dd;
+    margin: 0px 4px;
+    padding: 0;
+    color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    height: 10px;
+    width: 10px;
+}
+.komorebi-workspaces .ws-btn:hover {
+    background-color: orange;
+}
+.komorebi-workspaces .ws-btn.populated {
+    background-color: #ea7094;
+}
+
+.komorebi-workspaces .ws-btn.active {
+    color: rgba(149, 177, 255, 0);
+    background-color: orange;
+    width: 36px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* Komorebi Active Layout */
+.komorebi-active-layout {
+    padding: 1px 0;
+}
+.komorebi-active-layout .widget-container {
+    background-color: var(--peach);
+    border-radius: 6px;
+}
+.komorebi-active-layout .label {
+    padding: 0 6px;
+    margin: 1px 2px 2px 1px;
+    border-radius: 5px;
+    background-color: #221f2e;
+    color: var(--peach);
+}
+
+/* Komorebi Layout Menu*/
+.komorebi-layout-menu {
+    background-color: rgba(17, 17, 27, 0.4);
+}
+.komorebi-layout-menu .menu-item {
+    padding: 8px 16px;
+    font-size: 12px;
+    color: #cdd6f4;
+    font-weight: 600;
+}
+.komorebi-layout-menu .menu-item-icon {
+    color: #cdd6f4;
+    font-size: 16px;
+}
+.komorebi-layout-menu .menu-item-text {
+    font-family: "JetBrainsMono NFP";
+    padding-left: 4px;
+    font-size: 12px;
+}
+.komorebi-layout-menu .menu-item:hover {
+    background-color: rgba(128, 130, 158, 0.15);
+    color: #fff;
+}
+.komorebi-layout-menu .separator {
+    max-height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
