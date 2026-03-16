@@ -2,7 +2,7 @@ Win11-Config 🧊
 
 
 
-Bộ sưu tập các file cấu hình (config) Windows 11 ricing cá nhân, tập trung vào sự tối giản, hiệu suất và khả năng tự động hóa công việc.
+Bộ sưu tập các file cấu hình (config) Windows 11 ricing cá nhân. Múa may cho đẹp thoả mãn sở thích thôi chứ ko biết 1 dòng code nào. AI gánh hết
 
 🖥️ Thành phần chính
 
@@ -58,13 +58,11 @@ Tìm đến widget weather (khoảng dòng 159). Tôi đã để sẵn placehold
 
 
 
-Các đường dẫn trong menu Home (dòng 40-47) được thiết lập theo cấu trúc ổ đĩa cá nhân. Bạn cần sửa lại để trỏ đúng vào các thư mục trên máy bạn:
+Các đường dẫn trong menu widget Home (dòng 40-47 ~ chắc thế) được thiết lập theo cấu trúc ổ đĩa cá nhân. Bạn cần sửa lại để trỏ đúng vào các thư mục trên máy bạn:
 
 
 
 &#x20;   Sử dụng biến môi trường: Tôi đã cấu hình sẵn %USERPROFILE% cho các thư mục hệ thống để tự động nhận diện tên người dùng của bạn.
-
-
 
 &#x20;   Sửa thủ công các ổ đĩa khác:
 
