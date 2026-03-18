@@ -290,6 +290,13 @@ widgets:
         lazy_load_fadein: 200
         image_corner_radius: 5
         enable_cache: true
+      keybindings:
+        - keys: "win+y"
+          action: "toggle_gallery"
+      callbacks:
+        on_left: "toggle_gallery"
+        on_middle: "do_nothing"
+        on_right: "change_wallpaper"
       run_after:
         - 'powershell -NoProfile -ExecutionPolicy Bypass -Command "Start-Sleep -Milliseconds 100; $ws = New-Object -ComObject WScript.Shell; $ws.SendKeys(''{ESC}'')"'
   media:
